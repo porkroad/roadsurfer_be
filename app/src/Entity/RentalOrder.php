@@ -90,9 +90,6 @@ class RentalOrder
         return $this->id;
     }
 
-    /**
-     * @return Station
-     */
     public function getReturnStation(): Station
     {
         return $this->returnStation;
@@ -111,17 +108,11 @@ class RentalOrder
         return $this->equipment;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getStartDate(): \DateTime
     {
         return $this->startDate;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getEndDate(): \DateTime
     {
         return $this->endDate;

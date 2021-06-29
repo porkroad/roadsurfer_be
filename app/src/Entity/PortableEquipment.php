@@ -52,10 +52,7 @@ class PortableEquipment
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getStation()
+    public function getStation(): Station
     {
         return $this->station;
     }
@@ -70,7 +67,7 @@ class PortableEquipment
         return $this;
     }
 
-    public function setType(string $type)
+    public function setType(string $type): self
     {
         $this->type = $type;
 
@@ -91,10 +88,7 @@ class PortableEquipment
         throw new \Exception(sprintf('no more equipment of type %s left on station %s', $this->type, $this->station));
     }
 
-    /**
-     * @return mixed
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
