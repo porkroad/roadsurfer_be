@@ -6,6 +6,7 @@ make start
 ```
 ```shell
 make php-bash
+symfony composer install
 symfony console doctrine:migrations:migrate
 symfony console doctrine:fixtures:load
 ```
