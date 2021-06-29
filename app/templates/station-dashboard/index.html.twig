@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BaseController!{% endblock %}
+
+{% block body %}
+
+    {% if error is defined %}
+        {{ error }}
+    {% else %}
+        {% for stationName, station in equipmentCount %}
+            {{ stationName }}
+        <table>
+            <tr>
+                {% for dayFormatted, day in station %}
+                    <th>{{ dayFormatted }}</th>
+                {% endfor %}
+            </tr>
+            <tbody>
+            <tr>
+                {% for day in station %}
+                    <td>
+                    {% for equipmentName, count in day %}
+                        {{equipmentName }}: <b>{{ count }}</b> <br />
+                    {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+
+        {% endfor %}
+    {% endif %}
+{% endblock %}
